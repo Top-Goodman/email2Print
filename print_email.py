@@ -15,8 +15,15 @@ import io
 log_formatter = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
-logger.addHandler(logging.StreamHandler())
-logger.addHandler(logging.FileHandler("email2print.log"))
+
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(log_formatter)
+logger.addHandler(console_handler)
+
+file_handler = logging.FileHandler("email2print.log")
+file_handler.setFormatter(log_formatter)
+logger.addHandler(file_handler)
+
 
 # Helper to get env variables
 def get_env_var(name, required=False, default=None):
