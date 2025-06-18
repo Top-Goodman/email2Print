@@ -1,0 +1,37 @@
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+.env.*
+
+# Logs and debug
+*.log
+
+# Virtual environment
+venv/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Docker
+*.pid
+*.tar
+*.bak
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# VSCode or IDE settings
+.vscode/
+.idea/
+
+# Old revisions of the script
+print_email.py.v*

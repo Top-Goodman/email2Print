@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  email2print:
+    build: .
+    container_name: email2print
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - /var/run/cups/cups.sock:/var/run/cups/cups.sock
+    command: ["sh", "-c", "while true; do python3 print_email.py; sleep 30; done"]
