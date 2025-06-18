@@ -188,4 +188,8 @@ def main_loop():
         time.sleep(SLEEP_TIME)
 
 if __name__ == "__main__":
+    print(f"Monitoring inbox: {EMAIL_ACCOUNT}")
+    print(f"Printing to printer: {PRINTER_NAME}")
+    print(f"Scan interval: {SLEEP_TIME} seconds")
+    logger.info(f"Starting email2print with inbox: {EMAIL_ACCOUNT}, printer: {PRINTER_NAME}, scan interval: {SLEEP_TIME}s")
     main_loop()
